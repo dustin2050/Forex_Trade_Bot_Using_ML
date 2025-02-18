@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade History</title>
+</head>
+<body>
+    <h1>Trade History</h1>
+    <table border="1">
+        <tr>
+            <th>Symbol</th>
+            <th>Order Type</th>
+            <th>Volume</th>
+            <th>SL Price</th>
+            <th>TP Price</th>
+            <th>Status</th>
+            <th>Email</th>
+        </tr>
+        {% for trade in trades %}
+        <tr>
+            <td>{{ trade.symbol }}</td>
+            <td>{{ trade.order_type }}</td>
+            <td>{{ trade.volume }}</td>
+            <td>{{ trade.sl_price }}</td>
+            <td>{{ trade.tp_price }}</td>
+            <td>{{ trade.status }}</td>
+            <td>{{ trade.user_email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

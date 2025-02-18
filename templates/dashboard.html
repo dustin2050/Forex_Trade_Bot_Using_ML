@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>User Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Navbar styles */
+    .navbar-brand {
+      font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .navbar-nav .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      color: black !important;
+      margin-right: 20px;
+    }
+
+    /* Dashboard styles */
+    .welcome-text {
+      font-family: 'Roboto Slab', serif;
+      font-size: 28px;
+      margin-top: 20px;
+    }
+
+    .card {
+      margin-bottom: 20px;
+    }
+
+    .card-header {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .advertisement {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .advertisement h3 {
+      color: #007bff;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .advertisement p {
+      font-size: 16px;
+    }
+
+    .advertisement a {
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      color: #6c757d;
+    }
+  </style>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Trading Bot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="/home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/profile" class="nav-link">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="/tutorial" class="nav-link">Tutorial</a>
+        </li>
+        <li class="nav-item">
+          <a href="/bot" class="nav-link">Bot</a>
+        </li>
+        <li class="nav-item">
+          <a href="/logout" class="nav-link">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Welcome and Overview -->
+  <div class="container mt-5">
+    <h2 class="welcome-text text-center">Welcome, {{ user.name }}!</h2>
+    <p class="text-center">Get an overview of your trading performance and bot activity below.</p>
+  </div>
+
+  <!-- Advertisement Section -->
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="advertisement">
+          <h3>Check Out Our Latest Trading Tools!</h3>
+          <p>Looking for powerful tools to enhance your trading strategy? Visit our site for exclusive offers and products that will help you maximize your trading performance.</p>
+          <a href="https://your-site-url.com" target="_blank">Visit Our Site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2024 Trading Bot. All rights reserved. <a href="#">Help & Support</a> | <a href="#">Privacy Policy</a></p>
+  </div>
+
+</body>
+
+</html>

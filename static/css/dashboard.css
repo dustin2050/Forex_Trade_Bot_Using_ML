@@ -1,0 +1,169 @@
+/* Font and basic layout styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2; /* Light background for contrast */
+    color: #333;
+}
+
+/* Navbar styles */
+.navbar-brand {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #007bff !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: #333 !important;
+    margin-right: 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar hover effect */
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Welcome text */
+.welcome-text {
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    color: #007bff;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Dashboard container */
+.container {
+    margin-top: 30px;
+}
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Advertisement section */
+.advertisement {
+    background-color: #ffffff;
+    border: 2px solid #007bff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.advertisement h3 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.advertisement p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Call to action button */
+.advertisement a {
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.advertisement a:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #007bff;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.6);
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+    color: #555;
+}
+
+/* Form inputs for future customization */
+input, select, textarea {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}

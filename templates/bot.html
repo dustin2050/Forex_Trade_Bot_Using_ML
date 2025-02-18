@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Control and Trades</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1>Bot Control</h1>
+
+<!-- Button to Start Bot -->
+<button id="startBotBtn">Start Bot</button>
+<p id="statusMessage"></p>
+
+<h1>Bot Trade Results</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Type</th>
+            <th>Volume</th>
+            <th>Price</th>
+            <th>Stop Loss</th>
+            <th>Take Profit</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for trade in trade_results %}
+            <tr>
+                <td>{{ trade.symbol }}</td>
+                <td>{{ trade.type }}</td>
+                <td>{{ trade.volume }}</td>
+                <td>{{ trade.price }}</td>
+                <td>{{ trade.stop_loss }}</td>
+                <td>{{ trade.take_profit }}</td>
+                <td>{{ trade.status }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">No trades executed yet.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function() {
+        // Start the bot when the button is clicked
+        $('#startBotBtn').click(function() {
+            $.ajax({
+                url: '/start-bot',
+                method: 'POST',
+                success: function(response) {
+                    $('#statusMessage').text(response.status);
+                },
+                error: function() {
+                    $('#statusMessage').text('Error starting the bot.');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
